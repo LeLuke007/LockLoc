@@ -2,7 +2,7 @@
 A Digital Access Code Generator ~ By Team SyntaxError
 
 ### Deployment
-  - [Azure](https://lockloc.azurewebsites.net)
+  - [Azure](https://lockloc.azurewebsites.net) (Having Issues in Deployment. Please Deploy Manually!)
   
 ### Manual Deployment
 ```sh
