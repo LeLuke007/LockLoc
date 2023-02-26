@@ -8,7 +8,7 @@ Our goal is to create a system that will let people register their addresses wit
 ```sh
   # Prerequisites: Python 3.11, Web Browser
   
-  # Clone the repository
+  # Clone the repository or Download
   $ git clone https://github.com/LeLuke007/LockLoc
   
   # Change to current directory
