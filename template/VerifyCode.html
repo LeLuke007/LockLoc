@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}
+Verify Code
+{% endblock title %}
+{% block body %}
+
+<div style="padding: 1vw; ">
+  <a href="/verify" class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block ">Verify Your DAC </a>
+</div>
+
+
+{% if verified %}
+<div class="split right">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <br><br><br>
+
+
+        <h1 class="text-uppercase mb-4 "><span class="text-uppercase text-primary ">Your Details are :-</span></h1>
+        <h3> Latitude : {{latitude_generated}} </h3>
+        <h3> Longitude : {{longitude_generated}} </h3>
+        <h3> Global Address : {{global_address}} </h3>
+        <h3> Plus Code : {{plus_code}} </h3>
+
+
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endif %}
+<div class="split left">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <form method="POST" action="/verify">
+          <div class="form-row">
+
+            <div class="col-md-10 mb-3">
+              <label for="street">Enter Latitude : </label>
+              <input type="text" class="form-control" id="lat" name="lat" placeholder="" value=""
+              required>
+
+            </div>
+            <div class="col-md-10 mb-3">
+              <label for="street">Enter Longitude : </label>
+              <input type="text" class="form-control" id="long" name="long" placeholder="" value=""
+              required>
+
+            </div>
+            <!--
+            <div class="col-md-10 mb-3">
+              <label for="street">Enter Plus Code : </label>
+              <input type="text" class="form-control" id="pcode" name="pcode" placeholder="" value=""
+                required>-->
+
+            </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Verify code</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="static/lib/wow/wow.min.js"></script>
+<script src="static/lib/easing/easing.min.js"></script>
+<script src="static/lib/waypoints/waypoints.min.js"></script>
+<script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="static/js/main.js"></script>
+
+
+{% endblock body %}

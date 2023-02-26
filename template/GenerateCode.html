@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %}
+Generate Code
+{% endblock title %}
+{% block body %}
+
+<div style="padding: 1vw; ">
+  <a href="/generate" class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block ">Address to DAC </a>
+</div>
+
+
+{% if generated %}
+<div class="split right">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <br><br><br>
+
+        <h1 class="text-uppercase mb-4 "><span class="text-uppercase text-primary ">Your Details are :-</span></h1>
+        <h3> Global Address : {{global_address}} </h3>
+        <h3> Latitude : {{latitude_generated}} </h3>
+        <h3> Longitude : {{longitude_generated}} </h3>
+        <h3> Plus Code : {{plus_code}} 
+        <h3><img class="img-fluid" src={{qr_code}}> &nbsp;
+        <a href="{{qr_code}}" download="LockLoc.png">
+          <button class="btn btn-primary" type="submit">Download PNG</button></a></h3>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endif %}
+<div class="split left">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <form method="POST" action="/generate">
+          <div class="form-row">
+            <div class="col-md-10 mb-3">
+              <label for="flat_building">Flat No. / Building Name / Locality</label>
+              <input type="text" class="form-control" id="flat_building" name="flat_building"
+                placeholder="" value="" required>
+
+            </div>
+            <div class="col-md-10 mb-3">
+              <label for="street">Street Name</label>
+              <input type="text" class="form-control" id="street" name="street" placeholder="" value=""
+                required>
+
+            </div>
+            <div class="form-row">
+              <div class="col-md-10 mb-3">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" name="city" placeholder="" value=""
+                  required>
+
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-10 mb-3">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" name="state" placeholder="" value=""
+                  required>
+
+              </div>
+              <div class="form-row">
+                <div class="col-md-10 mb-3">
+                  <label for="country">Country</label>
+                  <input type="text" class="form-control" id="country" name="country" placeholder="India" value="India" disabled>
+
+                </div>
+
+                <div class="col-md-10 mb-3">
+                  <label for="pincode">Pin code</label>
+                  <input type="text" class="form-control" id="pincode" name="pincode" placeholder="" value=""
+                    required>
+
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Generate code</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="static/lib/wow/wow.min.js"></script>
+<script src="static/lib/easing/easing.min.js"></script>
+<script src="static/lib/waypoints/waypoints.min.js"></script>
+<script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="static/js/main.js"></script>
+
+{% endblock body %}
