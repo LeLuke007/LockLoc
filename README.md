@@ -2,4 +2,4 @@
 A Digital Access Code Generator ~ By Team SyntaxError
 
 ## Deployment
-  Azure (https://lockloc.azurewebsites.net)
+  - [Azure](https://lockloc.azurewebsites.net)
