@@ -1,5 +1,5 @@
-# LockLoc
-A Digital Access Code Generator ~ By Team SyntaxError
+# LockLoc - A Digital Access Code Generator
+Our goal is to create a system that will let people register their addresses with us and acquire a special code that will allow them to quickly access their information.
 
 ## Deployment
   - [Azure](https://lockloc.azurewebsites.net) (Having Issues in Deployment. Please Deploy Manually!)
