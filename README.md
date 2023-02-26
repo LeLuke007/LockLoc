@@ -6,13 +6,15 @@ A Digital Access Code Generator ~ By Team SyntaxError
   
 ### Manual Deployment
 ```sh
+  # Prerequisites: Python 3.11, Web Browser
+  
   # Clone the repository
   $ git clone https://github.com/LeLuke007/LockLoc
   
   # Change to current directory
   $ cd LockLoc
   
-  # Install Prerequisites
+  # Install the required modules
   $ pip install -r requirements.txt
   
   # Deploy
