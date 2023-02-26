@@ -13,7 +13,7 @@ A Digital Access Code Generator ~ By Team SyntaxError
   $ cd LockLoc
   
   # Install Prerequisites
-  $ pip intsall -r requirements.txt
+  $ pip install -r requirements.txt
   
   # Deploy
   $ python app.py
